@@ -8,6 +8,18 @@ export const barberData = {
   phoneNumber: "5511999999999",
   whatsappMessage: "Olá, gostaria de agendar um horário",
   whatsappLabel: "Agendar Horário",
+  bio: "Especialista em cortes masculinos modernos com mais de 10 anos de experiência. Formado pela Academia de Barbearia de São Paulo e com cursos internacionais de aperfeiçoamento. Minha missão é proporcionar uma experiência única, transformando o visual dos meus clientes com precisão e criatividade.",
+  credentials: [
+    "Certificado pela Academia de Barbearia de São Paulo",
+    "Especialização em Cortes Europeus - Milão, Itália",
+    "Técnicas avançadas de barba e bigode - Barcelona, Espanha",
+    "Top 10 Barbeiros de São Paulo - 2022"
+  ],
+  location: {
+    address: "Rua dos Barbeiros, 123 - Centro",
+    city: "São Paulo - SP",
+    googleMapsUrl: "https://maps.google.com"
+  },
   services: [
     {
       title: "Corte Masculino",
@@ -17,7 +29,10 @@ export const barberData = {
         "Análise do formato do rosto",
         "Cortes degradê, americano e clássico",
         "Acabamento com navalha"
-      ]
+      ],
+      price: "R$ 60,00",
+      duration: "45 min",
+      bookingUrl: "#agenda"
     },
     {
       title: "Barba & Bigode",
@@ -27,15 +42,92 @@ export const barberData = {
         "Modelagem personalizada",
         "Tratamento com toalha quente",
         "Produtos especiais para finalização"
-      ]
+      ],
+      price: "R$ 45,00",
+      duration: "30 min",
+      bookingUrl: "#agenda"
+    },
+    {
+      title: "Combo Completo",
+      icon: "fas fa-star",
+      description: "Experimente o melhor da barbearia com nosso serviço completo que inclui corte, barba e tratamentos extras.",
+      features: [
+        "Corte de cabelo premium",
+        "Barba completa com tratamento",
+        "Hidratação facial",
+        "Bebida cortesia"
+      ],
+      price: "R$ 95,00",
+      duration: "1h15min",
+      bookingUrl: "#agenda",
+      featured: true
     }
   ],
-  testimonial: {
-    quote: "\"Carlos é um verdadeiro artista! Sempre saio da barbearia com um visual incrível. Ele entende exatamente o que quero antes mesmo de eu explicar. Recomendo a todos que buscam qualidade.\"",
-    author: "Marcelo Santos",
-    role: "Cliente há 3 anos",
-    avatarSrc: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=80&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjI4NzU4NDYw&ixlib=rb-1.2.1&q=80&w=80"
-  },
+  testimonials: [
+    {
+      quote: "\"Carlos é um verdadeiro artista! Sempre saio da barbearia com um visual incrível. Ele entende exatamente o que quero antes mesmo de eu explicar. Recomendo a todos que buscam qualidade.\"",
+      author: "Marcelo Santos",
+      role: "Cliente há 3 anos",
+      avatarSrc: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=80&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjI4NzU4NDYw&ixlib=rb-1.2.1&q=80&w=80"
+    },
+    {
+      quote: "\"Procurei muito por um barbeiro que realmente entendesse de cabelo crespo. Depois que conheci o Carlos, nunca mais mudei. Ele faz milagres com meu cabelo e a minha barba nunca ficou tão bem cuidada!\"",
+      author: "Felipe Nascimento",
+      role: "Cliente desde 2020",
+      avatarSrc: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=80&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjI4NzU4NDYw&ixlib=rb-1.2.1&q=80&w=80"
+    },
+    {
+      quote: "\"O ambiente da barbearia é incrível, e o atendimento do Carlos é impecável. Ele não só faz um trabalho excelente, mas também dá dicas valiosas de como manter o visual em casa. Vale cada centavo!\"",
+      author: "Rafael Mendonça",
+      role: "Cliente satisfeito",
+      avatarSrc: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=80&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjI4NzU4NDYw&ixlib=rb-1.2.1&q=80&w=80"
+    }
+  ],
+  specialOffers: [
+    {
+      title: "Promoção de Quinta-feira",
+      description: "Toda quinta-feira, traga um amigo e ganhe 20% de desconto em qualquer serviço!",
+      validUntil: "Válido por tempo indeterminado",
+      couponCode: "AMIGO20",
+      ctaText: "Agendar com desconto",
+      ctaUrl: "#agenda"
+    },
+    {
+      title: "Cliente Fidelidade",
+      description: "Após 5 cortes, o sexto é GRATUITO! Peça seu cartão fidelidade.",
+      validUntil: "Benefício permanente",
+      ctaText: "Saiba mais",
+      ctaUrl: "#fidelidade"
+    }
+  ],
+  gallery: [
+    {
+      imageSrc: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=500&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjI4NzU4NDYw&ixlib=rb-1.2.1&q=80&w=500",
+      caption: "Corte degradê com acabamento perfeito"
+    },
+    {
+      imageSrc: "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=500&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjI4NzU4NDYw&ixlib=rb-1.2.1&q=80&w=500",
+      caption: "Tratamento de barba completo"
+    },
+    {
+      imageSrc: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=500&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjI4NzU4NDYw&ixlib=rb-1.2.1&q=80&w=500",
+      caption: "Ambiente da barbearia"
+    }
+  ],
+  faq: [
+    {
+      question: "Quanto tempo dura um corte completo?",
+      answer: "Um corte completo com acabamento leva cerca de 45 minutos. Se incluir barba, reserve aproximadamente 1h15min."
+    },
+    {
+      question: "Preciso agendar ou posso ir sem hora marcada?",
+      answer: "Recomendo sempre agendar para garantir atendimento sem espera. Atendo por ordem de chegada apenas quando há cancelamentos."
+    },
+    {
+      question: "Qual forma de pagamento vocês aceitam?",
+      answer: "Aceitamos dinheiro, PIX, cartões de débito e crédito, e também parcelamos em até 2x sem juros."
+    }
+  ],
   socialLinks: [
     {
       icon: "fab fa-instagram",
@@ -48,6 +140,10 @@ export const barberData = {
     {
       icon: "fab fa-tiktok",
       url: "https://tiktok.com"
+    },
+    {
+      icon: "fab fa-youtube",
+      url: "https://youtube.com"
     }
   ],
   copyright: "© 2023 Carlos Barbearia - Todos os direitos reservados"
