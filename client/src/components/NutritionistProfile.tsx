@@ -1,11 +1,15 @@
 import ProfileHeader from "./common/ProfileHeader";
 import ServiceCard from "./common/ServiceCard";
-import TestimonialCard from "./common/TestimonialCard";
+import TestimonialsSection from "./common/TestimonialsSection";
 import SocialLinks from "./common/SocialLinks";
 import WhatsAppButton from "./common/WhatsAppButton";
 import Footer from "./common/Footer";
+import ProfessionalBio from "./common/ProfessionalBio";
+import SpecialOffers from "./common/SpecialOffers";
+import ImageGallery from "./common/ImageGallery";
 import { nutritionistData } from "@/lib/data";
-import { Apple, Salad, Utensils, Clock, Calendar, MapPin, Activity, Lightbulb, Weight } from "lucide-react";
+import { Apple, Salad, Utensils, Clock, Calendar, MapPin, Activity, Lightbulb, Weight, HelpCircle } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export default function NutritionistProfile() {
   return (
@@ -28,6 +32,14 @@ export default function NutritionistProfile() {
           theme="nutritionist"
         />
 
+        {/* Professional Bio with credentials */}
+        <ProfessionalBio 
+          bio={nutritionistData.bio}
+          credentials={nutritionistData.credentials}
+          location={nutritionistData.location}
+          theme="nutritionist"
+        />
+
         {/* Nutrition Quote */}
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 mb-6 border border-white/20 shadow-xl">
           <div className="flex items-start gap-2">
@@ -38,6 +50,20 @@ export default function NutritionistProfile() {
             </p>
           </div>
         </div>
+
+        {/* WhatsApp Button */}
+        <WhatsAppButton
+          phoneNumber={nutritionistData.phoneNumber}
+          message={nutritionistData.whatsappMessage}
+          label={nutritionistData.whatsappLabel}
+          theme="nutritionist"
+        />
+
+        {/* Special Offers */}
+        <SpecialOffers
+          offers={nutritionistData.specialOffers}
+          theme="nutritionist"
+        />
 
         {/* Highlighted Features */}
         <div className="grid grid-cols-3 gap-3 mb-6">
@@ -55,6 +81,28 @@ export default function NutritionistProfile() {
           </div>
         </div>
 
+        {/* Services */}
+        <div className="grid gap-6 mb-8 relative">
+          <h2 className="text-nutritionist-accent font-semibold text-xl mb-2 text-center">
+            Serviços Oferecidos
+          </h2>
+          <div className="absolute inset-0 bg-gradient-to-b from-nutritionist-accent/20 to-transparent opacity-30 blur-xl -z-10 rounded-3xl"></div>
+          {nutritionistData.services.map((service, index) => (
+            <ServiceCard
+              key={index}
+              title={service.title}
+              icon={service.icon}
+              description={service.description}
+              features={service.features}
+              price={service.price}
+              duration={service.duration}
+              bookingUrl={service.bookingUrl}
+              featured={service.featured}
+              theme="nutritionist"
+            />
+          ))}
+        </div>
+        
         {/* Business Info */}
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 mb-6 border border-white/20 shadow-xl">
           <h2 className="text-nutritionist-accent font-semibold text-lg mb-3 flex items-center">
@@ -74,52 +122,55 @@ export default function NutritionistProfile() {
           <div className="mt-4 pt-4 border-t border-white/20">
             <div className="flex items-start gap-2">
               <MapPin className="w-5 h-5 mt-0.5 text-nutritionist-primary flex-shrink-0" />
-              <span className="text-sm">Rua da Saúde, 789 - Jardim Botânico<br />São Paulo - SP</span>
+              <span className="text-sm">{nutritionistData.location.address}<br />{nutritionistData.location.city}</span>
             </div>
           </div>
-        </div>
-
-        {/* WhatsApp Button */}
-        <WhatsAppButton
-          phoneNumber={nutritionistData.phoneNumber}
-          message={nutritionistData.whatsappMessage}
-          label={nutritionistData.whatsappLabel}
-          theme="nutritionist"
-        />
-
-        {/* Services */}
-        <div className="grid gap-6 mb-8 relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-nutritionist-accent/20 to-transparent opacity-30 blur-xl -z-10 rounded-3xl"></div>
-          {nutritionistData.services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              title={service.title}
-              icon={service.icon}
-              description={service.description}
-              features={service.features}
-              theme="nutritionist"
-            />
-          ))}
         </div>
         
         {/* Appointment Button */}
         <div className="mb-8">
-          <button 
+          <a
+            href="#consulta"
             className="w-full py-3.5 bg-nutritionist-primary hover:bg-nutritionist-primary/90 text-white rounded-lg flex items-center justify-center font-medium transition-all shadow-lg"
           >
             <Calendar className="w-5 h-5 mr-2" />
             Agendar Consulta Online
-          </button>
+          </a>
         </div>
 
-        {/* Testimonial */}
-        <TestimonialCard
-          quote={nutritionistData.testimonial.quote}
-          author={nutritionistData.testimonial.author}
-          role={nutritionistData.testimonial.role}
-          avatarSrc={nutritionistData.testimonial.avatarSrc}
+        {/* Gallery */}
+        <ImageGallery 
+          images={nutritionistData.gallery}
           theme="nutritionist"
         />
+
+        {/* Testimonials */}
+        <TestimonialsSection
+          testimonials={nutritionistData.testimonials}
+          theme="nutritionist"
+        />
+
+        {/* FAQ Accordion */}
+        {nutritionistData.faq && nutritionistData.faq.length > 0 && (
+          <div className="mb-8">
+            <h2 className="text-nutritionist-accent font-semibold text-xl mb-4 flex items-center justify-center">
+              <HelpCircle className="w-5 h-5 mr-2" />
+              Perguntas Frequentes
+            </h2>
+            <Accordion type="single" collapsible className="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden border border-white/20">
+              {nutritionistData.faq.map((item, index) => (
+                <AccordionItem key={index} value={`item-${index}`} className="border-white/10">
+                  <AccordionTrigger className="px-4 py-3 text-white hover:text-nutritionist-accent text-left">
+                    {item.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="px-4 pb-3 text-gray-300">
+                    {item.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        )}
 
         {/* Social Media */}
         <SocialLinks
