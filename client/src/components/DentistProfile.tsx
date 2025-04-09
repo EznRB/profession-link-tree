@@ -1,5 +1,5 @@
 import React from "react";
-import { dentistData } from "../lib/data";
+import { dentistData } from "@/lib/data";
 import ProfileHeader from "./common/ProfileHeader";
 import ServiceCard from "./common/ServiceCard";
 import TestimonialCard from "./common/TestimonialCard";
