@@ -1,0 +1,10 @@
+[build]
+  base = "."
+  command = "bash netlify-build.sh"
+  publish = "dist/public"
+
+# Configuração para SPA (Single Page Application)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
