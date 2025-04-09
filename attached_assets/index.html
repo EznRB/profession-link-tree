@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prof. Italo Moreira - Transformação Fitness Completa</title>
+    <meta name="description" content="Personal Trainer e Mentor Fitness - Programas personalizados para seus objetivos">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    
+    <!-- Fontes e Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <style>
+        :root {
+            --primary: #FF5E14;  /* Laranja profissional */
+            --primary-dark: #E04B00;
+            --dark: #121212;
+            --light: #F8F9FA;
+            --accent: #FFA726;
+            --text: #E0E0E0;
+            --text-secondary: #B0B0B0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, var(--dark), #1E1E1E);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.6;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,94,20,0.1) 0%, transparent 70%);
+            z-index: -1;
+            animation: pulse 15s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(10%, 10%); }
+        }
+
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Header */
+        .profile-header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .profile-pic-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .profile-pic {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(255, 94, 20, 0.3);
+            transition: all 0.3s;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 94, 20, 0.4);
+        }
+
+        .verified-badge {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: var(--primary);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--dark);
+        }
+
+        h1 {
+            margin: 15px 0 5px;
+            font-size: 32px;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .tagline {
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+        }
+
+        .badge:hover {
+            background: rgba(255, 94, 20, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Botão WhatsApp */
+        .whatsapp-btn {
+            display: block;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin: 30px 0;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(255, 94, 20, 0.4);
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+        }
+
+        .whatsapp-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                rgba(255, 255, 255, 0) 45%,
+                rgba(255, 255, 255, 0.3) 50%,
+                rgba(255, 255, 255, 0) 55%
+            );
+            transform: rotate(30deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(30deg); }
+            100% { transform: translateX(100%) rotate(30deg); }
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 94, 20, 0.6);
+        }
+
+        .whatsapp-btn:active {
+            transform: translateY(0);
+        }
+
+        .whatsapp-btn i {
+            margin-right: 10px;
+        }
+
+        /* Cards de Serviços */
+        .services-grid {
+            display: grid;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .service-card {
+            background: linear-gradient(145deg, rgba(30,30,30,0.8), rgba(18,18,18,0.9));
+            border-radius: 16px;
+            padding: 25px;
+            border-left: 4px solid var(--primary);
+            transition: all 0.4s;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(255, 94, 20, 0.2);
+            border-color: var(--accent);
+        }
+
+        .service-title {
+            color: var(--primary);
+            margin: 0 0 15px 0;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .service-title i {
+            margin-right: 12px;
+            font-size: 24px;
+        }
+
+        .service-description {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .service-features li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 8px;
+            color: var(--text);
+            font-size: 14px;
+        }
+
+        .service-features li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        .service-btn {
+            display: inline-block;
+            background: rgba(255, 94, 20, 0.2);
+            color: var(--primary);
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            border: 1px solid var(--primary);
+        }
+
+        .service-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Depoimentos */
+        .testimonial-card {
+            background: linear-gradient(145deg, rgba(40,40,40,0.8), rgba(25,25,25,0.9));
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .testimonial-card::before {
+            content: '\f10d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 60px;
+            color: rgba(255, 94, 20, 0.05);
+            z-index: 0;
+        }
+
+        .testimonial-text {
+            position: relative;
+            z-index: 1;
+            font-style: italic;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .client-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 12px;
+            border: 2px solid var(--primary);
+        }
+
+        .client-name {
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .client-title {
+            color: var(--text-secondary);
+            font-size: 13px;
+            margin-top: 2px;
+        }
+
+        /* Redes Sociais */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0 20px;
+        }
+
+        .social-link {
+            color: white;
+            transition: all 0.3s;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.08);
+            font-size: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-link::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.1);
+            color: white;
+            box-shadow: 0 5px 15px rgba(255, 94, 20, 0.3);
+        }
+
+        .social-link:hover::after {
+            opacity: 0.4;
+        }
+
+        .social-link i {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-secondary);
+            font-size: 13px;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsivo */
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .profile-pic {
+                width: 140px;
+                height: 140px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            .whatsapp-btn {
+                padding: 16px;
+                font-size: 16px;
+            }
+        }
+
+        /* Efeito de flutuação */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho -->
+        <div class="profile-header floating">
+            <div class="profile-pic-container">
+                <img src="imagenprofitalo.jpg" alt="Prof. Ítalo Moreira" class="profile-pic">
+                <div class="verified-badge">
+                    <i class="fas fa-check"></i>
+                </div>
+            </div>
+            <h1>Prof. Italo Moreira</h1>
+            <p class="tagline">Transformação Corporal & Nutricional fitnes </p>
+            <div class="badges">
+                <span class="badge">Personal Trainer</span>
+                <span class="badge">Mentoria Fitness</span>
+                <span class="badge">Nutrição Esportiva</span>
+                <span class="badge">Coach Certificado</span>
+            </div>
+        </div>
+
+        <!-- Botão WhatsApp Principal -->
+        <a href="https://wa.me/5512991387921?text=Olá%20Professor%20Ítalo,%20gostaria%20de%20informações%20sobre%20seus%20serviços" 
+           class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> AGENDE SUA AVALIAÇÃO GRATUITA
+        </a>
+
+        <!-- Serviços -->
+        <div class="services-grid">
+            <div class="service-card">
+                <h3 class="service-title"><i class="fas fa-dumbbell"></i> Treino Personalizado</h3>
+                <p class="service-description">Programas 100% individualizados baseados em sua avaliação física e objetivos específicos.</p>
+                <ul class="service-features">
+                    <li>Acompanhamento diário via WhatsApp</li>
+                    <li>Planilhas de evolução mensal</li>
+                    <li>Vídeos demonstrativos dos exercícios</li>
+                    <li>Ajustes semanais conforme seu progresso</li>
+                </ul>
+                <a href="https://wa.me/5512991387921?text=Quero%20saber%20mais%20sobre%20o%20treino%20personalizado" 
+                   class="service-btn">
+                    QUERO MEUS RESULTADOS
+                </a>
+            </div>
+
+            <div class="service-card">
+                <h3 class="service-title"><i class="fas fa-brain"></i> Mentoria VIP</h3>
+                <p class="service-description">Programa completo de 12 semanas para transformação física e mental.</p>
+                <ul class="service-features">
+                    <li>Plano nutricional personalizado</li>
+                    <li>Suporte diário via WhatsApp</li>
+                    <li>Conteudo totalmente exclusivo</li>
+                    <li>Comunidade de alunos</li>
+                    <li>E-book com 50 receitas fitness</li>
+                </ul>
+                <a href="https://wa.me/5512991387921?text=Quero%20saber%20mais%20sobre%20a%20mentoria%20VIP" 
+                   class="service-btn">
+                    QUERO TRANSFORMAÇÃO
+                </a>
+            </div>
+        </div>
+
+        <!-- Depoimentos -->
+        <div class="testimonial-card">
+            <p class="testimonial-text">"Depois de tentar por anos, em apenas 4 meses com o Prof. Italo alcancei o corpo que sempre sonhei. Ele não só me ensinou a treinar, mas mudou completamente minha mentalidade sobre saúde e disciplina."</p>
+            <div class="client-info">
+                <img src="imagen01.jpg" alt="Mariana." class="client-avatar">
+                <div>
+                    <div class="client-name">Mariana.</div>
+                    <div class="client-title">Aluna há 8 meses</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <p class="testimonial-text">"O acompanhamento do Prof. Italo elevou meu desempenho em 40%. Sua metodologia científica e atenção aos detalhes fazem toda diferença. Alem de tudo Suas dicas por substituição de alimentos são exeletes!"</p>
+            <div class="client-info">
+                <img src="imagen02.jpg" alt="Graziella." class="client-avatar">
+                <div>
+                    <div class="client-name">Graziella.</div>
+                    <div class="client-title">Aluno há 1 ano</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Redes Sociais -->
+        <div class="social-links">
+            <a href="https://instagram.com/profitalomoreira" target="_blank" class="social-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://tiktok.com/@italo_tito" target="_blank" class="social-link">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://youtube.com/profitalomoreira" target="_blank" class="social-link">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=5512991387921" target="_blank" class="social-link">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            © 2025 Prof. Italo Moreira | Todos os direitos reservados<br>
+            <small>Transformando vidas através do fitness</small>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Efeito de digitação no título
+        document.addEventListener('DOMContentLoaded', function() {
+            const tagline = document.querySelector('.tagline');
+            const originalText = tagline.textContent;
+            tagline.textContent = '';
+            
+            let i = 0;
+            const typingEffect = setInterval(() => {
+                if (i < originalText.length) {
+                    tagline.textContent += originalText.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(typingEffect);
+                }
+            }, 50);
+            
+            // Anima os cards sequencialmente
+            const cards = document.querySelectorAll('.service-card, .testimonial-card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.2}s`;
+                card.classList.add('fadeIn');
+            });
+        });
+    </script>
+</body>
+</html>
