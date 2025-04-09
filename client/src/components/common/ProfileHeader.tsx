@@ -3,7 +3,7 @@ type ProfileHeaderProps = {
   title: string;
   imageSrc: string;
   badges: string[];
-  theme: "barber" | "mechanic" | "nutritionist";
+  theme: "barber" | "mechanic" | "nutritionist" | "photographer" | "dentist" | "personal";
 };
 
 export default function ProfileHeader({
@@ -31,6 +31,24 @@ export default function ProfileHeader({
       badge: "bg-nutritionist-primary",
       name: "from-nutritionist-primary to-nutritionist-accent",
       title: "text-nutritionist-accent",
+    },
+    photographer: {
+      border: "border-photographer-secondary",
+      badge: "bg-photographer-secondary",
+      name: "from-photographer-secondary to-photographer-accent",
+      title: "text-photographer-accent",
+    },
+    dentist: {
+      border: "border-dentist-secondary",
+      badge: "bg-dentist-secondary",
+      name: "from-dentist-secondary to-dentist-accent",
+      title: "text-dentist-accent",
+    },
+    personal: {
+      border: "border-personal-secondary",
+      badge: "bg-personal-secondary",
+      name: "from-personal-secondary to-personal-accent",
+      title: "text-personal-accent",
     },
   };
 

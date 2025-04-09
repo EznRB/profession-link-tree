@@ -1,6 +1,6 @@
 type FooterProps = {
   copyright: string;
-  theme: "barber" | "mechanic" | "nutritionist";
+  theme: "barber" | "mechanic" | "nutritionist" | "photographer" | "dentist" | "personal";
 };
 
 export default function Footer({ copyright, theme }: FooterProps) {
@@ -8,6 +8,9 @@ export default function Footer({ copyright, theme }: FooterProps) {
     barber: "text-gray-400 border-gray-700",
     mechanic: "text-gray-400 border-gray-700",
     nutritionist: "text-gray-300 border-white border-opacity-10",
+    photographer: "text-gray-400 border-gray-700",
+    dentist: "text-gray-300 border-white border-opacity-10",
+    personal: "text-gray-400 border-gray-700",
   };
 
   return (

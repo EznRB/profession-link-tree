@@ -2,7 +2,7 @@ type WhatsAppButtonProps = {
   phoneNumber: string;
   message: string;
   label: string;
-  theme: "barber" | "mechanic" | "nutritionist";
+  theme: "barber" | "mechanic" | "nutritionist" | "photographer" | "dentist" | "personal";
 };
 
 export default function WhatsAppButton({
@@ -15,6 +15,9 @@ export default function WhatsAppButton({
     barber: "from-barber-secondary to-barber-primary",
     mechanic: "from-mechanic-primary to-red-700",
     nutritionist: "from-nutritionist-primary to-green-700",
+    photographer: "from-photographer-secondary to-photographer-primary",
+    dentist: "from-dentist-secondary to-dentist-primary",
+    personal: "from-personal-secondary to-personal-primary",
   };
 
   const handleClick = () => {

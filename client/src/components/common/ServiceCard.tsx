@@ -3,7 +3,7 @@ type ServiceCardProps = {
   icon: string;
   description: string;
   features: string[];
-  theme: "barber" | "mechanic" | "nutritionist";
+  theme: "barber" | "mechanic" | "nutritionist" | "photographer" | "dentist" | "personal";
 };
 
 export default function ServiceCard({
@@ -34,6 +34,27 @@ export default function ServiceCard({
       title: "text-white",
       icon: "text-nutritionist-accent",
       button: "border-white text-white hover:bg-white hover:text-nutritionist-primary",
+    },
+    photographer: {
+      bg: "bg-gray-900 bg-opacity-80",
+      border: "border-photographer-secondary hover:border-photographer-accent",
+      title: "text-photographer-secondary",
+      icon: "text-photographer-accent",
+      button: "border-photographer-secondary text-photographer-secondary hover:bg-photographer-secondary",
+    },
+    dentist: {
+      bg: "bg-white bg-opacity-10",
+      border: "border-dentist-secondary hover:border-dentist-accent",
+      title: "text-white",
+      icon: "text-dentist-accent",
+      button: "border-white text-white hover:bg-white hover:text-dentist-primary",
+    },
+    personal: {
+      bg: "bg-gray-900 bg-opacity-80",
+      border: "border-personal-secondary hover:border-personal-accent",
+      title: "text-personal-secondary",
+      icon: "text-personal-accent",
+      button: "border-personal-secondary text-personal-secondary hover:bg-personal-secondary",
     },
   };
 

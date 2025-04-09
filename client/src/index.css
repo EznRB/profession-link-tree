@@ -124,6 +124,18 @@
   --nutritionist-primary: #2E7D32;
   --nutritionist-secondary: #F5F5F5;
   --nutritionist-accent: #A5D6A7;
+  
+  --photographer-primary: #6A1B9A;
+  --photographer-secondary: #4A148C;
+  --photographer-accent: #CE93D8;
+  
+  --dentist-primary: #0288D1;
+  --dentist-secondary: #01579B;
+  --dentist-accent: #81D4FA;
+  
+  --personal-primary: #F57C00;
+  --personal-secondary: #E65100;
+  --personal-accent: #FFB74D;
 }
 
 .text-barber-primary {
@@ -200,4 +212,142 @@
 
 .border-nutritionist-accent {
   border-color: var(--nutritionist-accent);
+}
+
+/* Photographer styles */
+.text-photographer-primary {
+  color: var(--photographer-primary);
+}
+
+.text-photographer-secondary {
+  color: var(--photographer-secondary);
+}
+
+.text-photographer-accent {
+  color: var(--photographer-accent);
+}
+
+.bg-photographer-primary {
+  background-color: var(--photographer-primary);
+}
+
+.bg-photographer-secondary {
+  background-color: var(--photographer-secondary);
+}
+
+.border-photographer-primary {
+  border-color: var(--photographer-primary);
+}
+
+.border-photographer-accent {
+  border-color: var(--photographer-accent);
+}
+
+.bg-photographer {
+  background: linear-gradient(135deg, #4A148C, #6A1B9A);
+  position: relative;
+}
+
+.bg-photographer::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(106,27,154,0.2) 0%, transparent 70%);
+  z-index: 0;
+  animation: pulse 15s infinite alternate;
+}
+
+/* Dentist styles */
+.text-dentist-primary {
+  color: var(--dentist-primary);
+}
+
+.text-dentist-secondary {
+  color: var(--dentist-secondary);
+}
+
+.text-dentist-accent {
+  color: var(--dentist-accent);
+}
+
+.bg-dentist-primary {
+  background-color: var(--dentist-primary);
+}
+
+.bg-dentist-secondary {
+  background-color: var(--dentist-secondary);
+}
+
+.border-dentist-primary {
+  border-color: var(--dentist-primary);
+}
+
+.border-dentist-accent {
+  border-color: var(--dentist-accent);
+}
+
+.bg-dentist {
+  background: linear-gradient(135deg, #01579B, #0288D1);
+  position: relative;
+}
+
+.bg-dentist::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(2,136,209,0.2) 0%, transparent 70%);
+  z-index: 0;
+  animation: pulse 15s infinite alternate;
+}
+
+/* Personal Trainer styles */
+.text-personal-primary {
+  color: var(--personal-primary);
+}
+
+.text-personal-secondary {
+  color: var(--personal-secondary);
+}
+
+.text-personal-accent {
+  color: var(--personal-accent);
+}
+
+.bg-personal-primary {
+  background-color: var(--personal-primary);
+}
+
+.bg-personal-secondary {
+  background-color: var(--personal-secondary);
+}
+
+.border-personal-primary {
+  border-color: var(--personal-primary);
+}
+
+.border-personal-accent {
+  border-color: var(--personal-accent);
+}
+
+.bg-personal {
+  background: linear-gradient(135deg, #E65100, #F57C00);
+  position: relative;
+}
+
+.bg-personal::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(245,124,0,0.2) 0%, transparent 70%);
+  z-index: 0;
+  animation: pulse 15s infinite alternate;
 }

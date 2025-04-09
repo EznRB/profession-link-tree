@@ -154,7 +154,206 @@ export const nutritionistData = {
     {
       icon: "fab fa-spotify",
       url: "https://spotify.com"
+    },
+    {
+      icon: "fab fa-twitter",
+      url: "https://twitter.com"
+    },
+    {
+      icon: "fab fa-linkedin-in",
+      url: "https://linkedin.com"
     }
   ],
   copyright: "© 2023 Ana Beatriz Nutrição - Todos os direitos reservados"
+};
+
+export const photographerData = {
+  name: "Pedro Almeida",
+  title: "Fotógrafo Profissional",
+  imageSrc: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjI4NzU4NDYw&ixlib=rb-1.2.1&q=80&w=300",
+  badges: ["Formado em Artes Visuais", "Eventos & Retratos", "12+ Anos Exp."],
+  phoneNumber: "5511999999999",
+  whatsappMessage: "Olá, gostaria de informações sobre seus serviços de fotografia",
+  whatsappLabel: "Solicitar Orçamento",
+  services: [
+    {
+      title: "Fotografia de Eventos",
+      icon: "fas fa-camera",
+      description: "Registro profissional de casamentos, aniversários e eventos corporativos com equipamentos de última geração.",
+      features: [
+        "Cobertura completa do evento",
+        "Tratamento de imagens premium",
+        "Entrega em álbum digital e impresso"
+      ]
+    },
+    {
+      title: "Ensaios Fotográficos",
+      icon: "fas fa-portrait",
+      description: "Sessões de fotos profissionais para indivíduos, famílias, gestantes e ensaios artísticos.",
+      features: [
+        "Consultoria de estilo e pose",
+        "Locações exclusivas",
+        "Maquiagem e styling inclusos"
+      ]
+    }
+  ],
+  testimonial: {
+    quote: "\"O Pedro tem um olhar único para a fotografia! Ele conseguiu capturar momentos do meu casamento que nem eu havia percebido. As fotos ficaram espetaculares e são meu tesouro mais precioso agora.\"",
+    author: "Mariana Rodrigues",
+    role: "Noiva fotografada em 2022",
+    avatarSrc: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=80&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjI4NzU4NDYw&ixlib=rb-1.2.1&q=80&w=80"
+  },
+  socialLinks: [
+    {
+      icon: "fab fa-instagram",
+      url: "https://instagram.com"
+    },
+    {
+      icon: "fab fa-facebook-f",
+      url: "https://facebook.com"
+    },
+    {
+      icon: "fab fa-pinterest",
+      url: "https://pinterest.com"
+    },
+    {
+      icon: "fab fa-behance",
+      url: "https://behance.com"
+    },
+    {
+      icon: "fab fa-flickr",
+      url: "https://flickr.com"
+    },
+    {
+      icon: "fab fa-youtube",
+      url: "https://youtube.com"
+    }
+  ],
+  copyright: "© 2023 Pedro Almeida Fotografia - Todos os direitos reservados"
+};
+
+export const dentistData = {
+  name: "Dra. Renata Costa",
+  title: "Dentista & Especialista em Estética",
+  imageSrc: "https://images.unsplash.com/photo-1614644147798-f8c0fc9da7f6?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjI4NzU4NDYw&ixlib=rb-1.2.1&q=80&w=300",
+  badges: ["CRO 54321", "Especialista em Ortodontia", "9+ Anos Exp."],
+  phoneNumber: "5511999999999",
+  whatsappMessage: "Olá, gostaria de agendar uma consulta odontológica",
+  whatsappLabel: "Agendar Consulta",
+  services: [
+    {
+      title: "Odontologia Estética",
+      icon: "fas fa-tooth",
+      description: "Tratamentos estéticos para um sorriso perfeito e harmonioso, com técnicas modernas e minimamente invasivas.",
+      features: [
+        "Clareamento dental avançado",
+        "Lentes de contato dental",
+        "Restaurações estéticas"
+      ]
+    },
+    {
+      title: "Tratamento Ortodôntico",
+      icon: "fas fa-smile",
+      description: "Correção de problemas de posicionamento dentário com aparelhos modernos e personalizados para cada paciente.",
+      features: [
+        "Aparelhos transparentes",
+        "Ortodontia lingual",
+        "Alinhadores invisíveis"
+      ]
+    }
+  ],
+  testimonial: {
+    quote: "\"A Dra. Renata mudou completamente meu sorriso e minha autoestima! Após anos evitando sorrir em fotos, agora não perco nenhuma oportunidade. O atendimento é excelente e o consultório super moderno.\"",
+    author: "Fernando Gomes",
+    role: "Paciente há 2 anos",
+    avatarSrc: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=80&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjI4NzU4NDYw&ixlib=rb-1.2.1&q=80&w=80"
+  },
+  socialLinks: [
+    {
+      icon: "fab fa-instagram",
+      url: "https://instagram.com"
+    },
+    {
+      icon: "fab fa-facebook-f",
+      url: "https://facebook.com"
+    },
+    {
+      icon: "fab fa-twitter",
+      url: "https://twitter.com"
+    },
+    {
+      icon: "fab fa-linkedin-in",
+      url: "https://linkedin.com"
+    },
+    {
+      icon: "fab fa-google",
+      url: "https://google.com"
+    }
+  ],
+  copyright: "© 2023 Dra. Renata Costa Odontologia - Todos os direitos reservados"
+};
+
+export const personalTrainerData = {
+  name: "Gustavo Mendes",
+  title: "Personal Trainer & Coach Fitness",
+  imageSrc: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjI4NzU4NDYw&ixlib=rb-1.2.1&q=80&w=300",
+  badges: ["CREF 67890", "Especialista em Hipertrofia", "11+ Anos Exp."],
+  phoneNumber: "5511999999999",
+  whatsappMessage: "Olá, gostaria de informações sobre treinos personalizados",
+  whatsappLabel: "Agendar Avaliação",
+  services: [
+    {
+      title: "Treinamento Personalizado",
+      icon: "fas fa-dumbbell",
+      description: "Programa de treinamento totalmente personalizado para seus objetivos, respeitando suas limitações e maximizando resultados.",
+      features: [
+        "Avaliação física completa",
+        "Planejamento periodizado",
+        "Acompanhamento constante"
+      ]
+    },
+    {
+      title: "Consultoria Online",
+      icon: "fas fa-laptop",
+      description: "Orientação à distância com planos de treino detalhados, vídeos explicativos e suporte contínuo via aplicativo.",
+      features: [
+        "Planilhas de treino semanais",
+        "Biblioteca de vídeos exclusivos",
+        "Consultas por videochamada"
+      ]
+    }
+  ],
+  testimonial: {
+    quote: "\"O Gustavo revolucionou meu conceito de treino! Em apenas 3 meses, consegui resultados que não obtive em anos de academia. Sua dedicação e conhecimento técnico são impressionantes.\"",
+    author: "Luciana Ferreira",
+    role: "Ganhou 5kg de massa muscular",
+    avatarSrc: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=80&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjI4NzU4NDYw&ixlib=rb-1.2.1&q=80&w=80"
+  },
+  socialLinks: [
+    {
+      icon: "fab fa-instagram",
+      url: "https://instagram.com"
+    },
+    {
+      icon: "fab fa-facebook-f",
+      url: "https://facebook.com"
+    },
+    {
+      icon: "fab fa-youtube",
+      url: "https://youtube.com"
+    },
+    {
+      icon: "fab fa-tiktok",
+      url: "https://tiktok.com"
+    },
+    {
+      icon: "fab fa-telegram",
+      url: "https://telegram.org"
+    },
+    {
+      icon: "fab fa-whatsapp",
+      url: "https://whatsapp.com"
+    }
+  ],
+  copyright: "© 2023 Gustavo Mendes Fitness - Todos os direitos reservados"
 };

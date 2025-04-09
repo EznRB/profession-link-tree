@@ -3,7 +3,7 @@ type TestimonialCardProps = {
   author: string;
   role: string;
   avatarSrc: string;
-  theme: "barber" | "mechanic" | "nutritionist";
+  theme: "barber" | "mechanic" | "nutritionist" | "photographer" | "dentist" | "personal";
 };
 
 export default function TestimonialCard({
@@ -31,6 +31,24 @@ export default function TestimonialCard({
       border: "border-white border-opacity-10",
       authorText: "text-nutritionist-accent",
       avatarBorder: "border-nutritionist-accent",
+    },
+    photographer: {
+      bg: "bg-gray-800 bg-opacity-60",
+      border: "border-gray-700",
+      authorText: "text-photographer-accent",
+      avatarBorder: "border-photographer-secondary",
+    },
+    dentist: {
+      bg: "bg-white bg-opacity-10",
+      border: "border-white border-opacity-10",
+      authorText: "text-dentist-accent",
+      avatarBorder: "border-dentist-secondary",
+    },
+    personal: {
+      bg: "bg-gray-800 bg-opacity-60",
+      border: "border-gray-700",
+      authorText: "text-personal-accent",
+      avatarBorder: "border-personal-secondary",
     },
   };
 
